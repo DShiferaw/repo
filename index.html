@@ -2,6 +2,7 @@
 <html> 
 <head>
 <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <meta name="viewport" content ="width=device-width, initial-scale=1"> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
@@ -110,9 +111,34 @@ me='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></o
  </div>
 <u><h2>Class 4<h2></u>
 <div class="jumbotron">
-<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 654px; height: 742px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;P7&#47;P7796CP8W&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='654' height='742' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;P7796CP8W' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;P7&#47;P7796CP8W&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div></div>
+<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 654px; height: 742px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;P7&#47;P7796CP8W&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='654' height='742' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;P7796CP8W' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;P7&#47;P7796CP8W&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
 
-</div>
+
+
+</div> 
+
+<div id="icons"></div> 
+
+<script type ="text/javascript"> 
+
+
+var ladies = 100; 
+var gentles = 200; 
+$("#icons").append('<h1>Ladies</h1>');
+
+
+for(var i=0; i < ladies; i++) { 
+  $("#icons").append('<i class="fa fa-female"></i>'); 
+
+}
+
+$("#icons").append('<h1>Gentlemen</h1>');
+ 
+for(var i=0; i < gentles; i++) { 
+  $("#icons").append('<i class="fa fa-male"></i>'); 
+  
+}
+</script>
 <u><h2>Class 5<h2></u>
 <u><h2>Class 6<h2></u> 
 
