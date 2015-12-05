@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <meta name="viewport" content ="width=device-width, initial-scale=1"> 
+  <script src="bower_components/squared/dist/squared.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
 @media only screen and (min-width : 320px) and (max-width : 763px) {
@@ -18,6 +19,26 @@ display: none;
 display: none;
 
 }
+} 
+
+.squared-geog {
+    background-color: #FDC26D;
+}
+.squared-geog.small {
+    background-color: red;
+    color: white;
+    font-family: 'Lato', sans-serif; 
+    border: solid 1px red;
+}
+.squared-geog.medium {
+    background-color: green;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+.squared-geog.large {
+    background-color: blue;
+    color: white;
+    font-family: 'Lato', sans-serif;
 }
 </style>
 </head>
@@ -139,7 +160,78 @@ for(var i=0; i < gentles; i++) {
   
 }
 </script>
-<u><h2>Class 5<h2></u>
+<u><h2>Class 5<h2></u> 
+<div class="jumbotron">
+  <div id="map" style="width: 600px; height: 400px"></div> 
+
+<script>
+var mydata = [{"full_name":"Alabama","name":"AL","medianIncome":42830},
+{"full_name":"Alaska","name":"AK","medianIncome":71583},
+{"full_name":"Arizona","name":"AZ","medianIncome":50068},
+{"full_name":"Arkansas","name":"AR","medianIncome":41262},
+{"full_name":"California","name":"CA","medianIncome":61933},
+{"full_name":"Colorado","name":"CO","medianIncome":61303},
+{"full_name":"Connecticut","name":"CT","medianIncome":70048},
+{"full_name":"Delaware","name":"DE","medianIncome":59716},
+{"full_name":"Florida","name":"FL","medianIncome":47463},
+{"full_name":"Georgia","name":"GA","medianIncome":49321},
+{"full_name":"Hawaii","name":"HI","medianIncome":69592},
+{"full_name":"Idaho","name":"ID","medianIncome":47861},
+{"full_name":"Illinois","name":"IL","medianIncome":57444},
+{"full_name":"Indiana","name":"IN","medianIncome":49446},
+{"full_name":"Iowa","name":"IA","medianIncome":53712},
+{"full_name":"Kansas","name":"KS","medianIncome":52504},
+{"full_name":"Kentucky","name":"KY","medianIncome":42958},
+{"full_name":"Louisiana","name":"LA","medianIncome":44555},
+{"full_name":"Maine","name":"ME","medianIncome":49462},
+{"full_name":"Maryland","name":"MD","medianIncome":73971},
+{"full_name":"Massachusetts","name":"MA","medianIncome":69160},
+{"full_name":"Michigan","name":"MI","medianIncome":49847},
+{"full_name":"Minnesota","name":"MN","medianIncome":61481},
+{"full_name":"Mississippi","name":"MS","medianIncome":39680},
+{"full_name":"Missouri","name":"MO","medianIncome":48363},
+{"full_name":"Montana","name":"MT","medianIncome":46328},
+{"full_name":"Nebraska","name":"NE","medianIncome":52686},
+{"full_name":"Nevada","name":"NV","medianIncome":51450},
+{"full_name":"New Hampshire","name":"NH","medianIncome":66532},
+{"full_name":"New Jersey","name":"NJ","medianIncome":71919},
+{"full_name":"New Mexico","name":"NM","medianIncome":44803},
+{"full_name":"New York","name":"NY","medianIncome":58878},
+{"full_name":"North Carolina","name":"NC","medianIncome":46556},
+{"full_name":"North Dakota","name":"ND","medianIncome":59029},
+{"full_name":"Ohio","name":"OH","medianIncome":49308},
+{"full_name":"Oklahoma","name":"OK","medianIncome":47529},
+{"full_name":"Oregon","name":"OR","medianIncome":51075},
+{"full_name":"Pennsylvania","name":"PA","medianIncome":53234},
+{"full_name":"Rhode Island","name":"RI","medianIncome":54891},
+{"full_name":"South Carolina","name":"SC","medianIncome":45238},
+{"full_name":"South Dakota","name":"SD","medianIncome":50979},
+{"full_name":"Tennessee","name":"TN","medianIncome":44361},
+{"full_name":"Texas","name":"TX","medianIncome":53035},
+{"full_name":"Utah","name":"UT","medianIncome":60922},
+{"full_name":"Vermont","name":"VT","medianIncome":54166},
+{"full_name":"Virginia","name":"VA","medianIncome":64902},
+{"full_name":"Washington","name":"WA","medianIncome":61366},
+{"full_name":"West Virginia","name":"WV","medianIncome":41059},
+{"full_name":"Wisconsin","name":"WI","medianIncome":52622},
+{"full_name":"Wyoming","name":"WY","medianIncome":57055}];
+
+ map = new Squared("map");
+ map.make(); 
+
+
+    map.data(mydata, "name");
+    console.log(mydata);
+    map.addClass(function(d){
+      if(d.medianIncome < 50000)
+        return "small";
+       else if(d.medianIncome < 60000 )
+         return "medium";
+       else return "large";
+    });
+
+</script>
+</div> 
 <u><h2>Class 6<h2></u> 
 
 
