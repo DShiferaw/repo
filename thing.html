@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<style></style>
+<body>
+
+	<div id = "article"> </div> 
+
+
+   <script> 
+
+     function writeNewsStory(title, company, symbol, day, quarter, income, city, netIncomePerShare, earningsPerShare, estimatedEarningsPerShare, revenue, estimatedRevenue, nextQuarterExpectationBottom,  nextQuarterExpectationTop ,fullYearEarningsExpectationsBottom, fullYearEarningsExpectationsTop, changePercentSinceYear, SPIndexChange, changePercentSinceMonths) {
+
+     	
+
+     if(quarter == 1){
+     	quarter= "first";
+     	} 
+     if(quarter == 2){
+     	quarter="second";
+     	} 
+     if(quarter == 3){ 
+     	quarter="third"
+     }
+     else {
+     	quarter="fourth"	 
+     }
+
+     if(income >= 1000000) { 
+         
+       incomePretty = income/1000000; 
+       income = incomePretty + " million"; 
+      
+     } 
+
+     if(revenue >= 1000000000) { 
+         
+       revenuePretty = revenue/1000000000; 
+       revenue = revenuePretty + " billion"; 
+      
+     } 
+
+     if(estimatedRevenue >= 1000000000) { 
+         
+       estimatedRevenuePretty = estimatedRevenue/1000000000; 
+       estimatedRevenue = estimatedRevenuePretty + " billion"; 
+      
+     }
+
+     $("#article").append("<h1>" + title + "</h1><p>" + company + " (" + symbol + ") " + "on " + day + " reported fiscal " + quarter + "-quarter net income of $" + income + ".</p><p>" + "On a per-share basis, the " + city + "-based company said it had net income of " + netIncomePerShare + " cents. Earnings, adjusted for asset impairment costs, were " + earningsPerShare + " cents per share. </p><p>" +"The results topped Wall Street expectations. The average estimate of eight analysts surveyed by Zacks Investment Research was for earnings of " + estimatedEarningsPerShare + " cents per share. </p> <p> The department store operator posted revenue of $" + revenue + " in the period, which did not meet Street forecasts. Five analysts surveyed by Zacks expected $" + estimatedRevenue +" billion. </p><p> For the current quarter ending in January, " + company + " expects its per-share earnings to range from $" + nextQuarterExpectationBottom + " to $" + nextQuarterExpectationTop + ".</p><p> The company expects full-year earnings in the range of $" + fullYearEarningsExpectationsBottom +" to $" + fullYearEarningsExpectationsTop +" per share.</p><p>" + company + "   shares have decreased " + changePercentSinceYear + " percent since the beginning of the year, while the Standard & Poor's 500 index has increased 1 percent. The stock has fallen " + SPIndexChange + " percent in the last " + changePercentSinceMonths + " months.</p>");
+     /*console.log(company + " (" + symbol + ") " + "on " + day + " reported fiscal " + quarter + "-quarter net income of $" + income); */
+
+     } 
+
+     writeNewsStory("Macy's beats 3Q profit forecasts","Macy's","M","Wednesday",3,118000000, "Cincinnati", 36, 56, 54, 5870000000, 6.15, 2.54, 2.64, 4.20, 4.30, 28, 21, 12); 
+
+
+     writeNewsStory("Apple wins 4Q","Apple","App","Tuesday",3,358000000, "Cupertino", 36, 76, 78, 7870000000, 6.15, 2.54, 2.64, 6.20, 8.30, 28, 21, 12); 
+     
+
+   </script>
+
+</body>
+</html>

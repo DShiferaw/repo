@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html lang="en">  
+<head>  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<title>Data Visualization</title> 
+	<meta charset="utf-8" /> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+</head> 
+<body> 
+
+<div id="icons"></div> 
+
+<script type ="text/javascript"> 
+
+
+var ladies = 100; 
+var gentles = 200; 
+$("#icons").append('<h1>Ladies</h1>');
+
+
+for(var i=0; i < ladies; i++) { 
+	$("#icons").append('<i class="fa fa-female"></i>'); 
+
+}
+
+$("#icons").append('<h1>Gentlemen</h1>');
+ 
+for(var i=0; i < gentles; i++) { 
+	$("#icons").append('<i class="fa fa-male"></i>'); 
+	
+}
+/*
+var classAU = ["Lindsey", "Daniel", "Erin"];  
+var class_num = [13,5,7]; 
+var classTravel=[false,true,false]; 
+var car =["VW", "Prius", "Toyota", "Landover"]; 
+var entouragenum = [100, 40, 90, 200];
+
+function WriteNewsStory(companyowner, cartype, entourage) { 
+	$('#icons').append(companyowner + " went bankrupt today.") 
+	$('#icons').append("They drove away in their " + cartype + "<br>"); 
+	$('#icons').append(entourage); 
+
+	for(var i =0; i< entourage; i++) 
+	{
+		$('#icons').append('<i class="fa fa-car"></i>');  
+		console.log("i is " + i);
+	}
+}
+
+for(var i = 0; i < classAU.length; i++) { 
+	WriteNewsStory(classAU[i], car[i], entouragenum[i]);
+}
+*/
+/*
+console.log(classAU[0]);  
+console.log(classAU.length); 
+console.log("Name is " + classAU[1]);  
+console.log("Lucky number is " + class_num[1]); 
+console.log("Going home for Thanksgiving: " + classTravel[1]); 
+console.log("There are " + classAU.length + " people in this class."); */
+</script>
+</body> 
+</html>
